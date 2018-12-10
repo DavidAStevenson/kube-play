@@ -5,13 +5,15 @@
 ### Start minkube cluster and configure kubectl shell autocompletion
 Cluster start
 ```
-minikube start
-kubectl get pods --namespace=kube-system
-kubectl version
-minikube version
-kubectl config view
+$ minikube start
+$ kubectl get pods --namespace=kube-system
+$ kubectl version
+$ minikube version
+$ kubectl config view
 ```
+Note, that last command appears to simply be outputing the contents of $HOME/.kube/config.
 ### Shell autocompletion configuration
+```
 kubectl completion -h
 kubectl completion bash > ~/.kube/completion.bash.inc
 printf "
