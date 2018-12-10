@@ -35,18 +35,17 @@ That's going to help. Autocompletion is applied not only for commands, but also 
 ## Test deployment
 
 ### Run echo server as hello-minikube (DEPRECATED)
-~~Note, `run` is used here, but should use `create` in future due to former's deprecation
+~~Note, `run` is used here, but should use `create` in future due to former's deprecation~~
 ```
-$ kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.4 --port=8080
-$ kubectl get po
-$ kubectl get deployment
-$ kubectl get rs
+~~$ kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.4 --port=8080~~
+~~$ kubectl get po~~
+~~$ kubectl get deployment~~
+~~$ kubectl get rs~~
 ```
-Once the pod is running, expose a service via NodePort
+~~Once the pod is running, expose a service via NodePort~~
 ```
-$ kubectl expose deployment hello-minikube --type=NodePort
+~~$ kubectl expose deployment hello-minikube --type=NodePort~~
 ```
-~~
 ### Run echo server as hello-minikube
 
 Due to `run` deprecation, had a play with `create`
