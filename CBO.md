@@ -37,7 +37,7 @@ That's going to help. Autocompletion is applied not only for commands, but also 
 ### Run echo server as hello-minikube (DEPRECATED)
 Note, `run` is used here, but should use `create` in future due to former's deprecation
 
-See the next section
+See the next section for `create` usage.
 ```
 $ kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.4 --port=8080
 $ kubectl get po
@@ -50,13 +50,15 @@ $ kubectl expose deployment hello-minikube --type=NodePort
 ```
 ### Run echo server as hello-minikube
 
-Due to `run` deprecation, had a play with `create`
+Due to `run` deprecation, get used to `creat`ing a deployment instead:
 ```
 $ kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.4
 $ kubectl get deployment
 $ kubectl get rs
 $ kubectl get po
 $ kubectl describe po hello-minikube-7b6c7fc556-lvqf4
+```
+The `expose` command required now also differs as well, for example this seems to do the trick...(not that I fully understand why at this point)
 ```
 $ kubectl expose -h
 $ kubectl expose deployment hello-minikube --type=NodePort --port=80 --target-port=8080
